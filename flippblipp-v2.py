@@ -1,15 +1,14 @@
-def flippblipp(n):
-    if n%15 == 0:
+a = 200
+
+def flippblipp(a):
+    if a%15 == 0:
         return ("flipp blipp")
-    elif n%5 == 0:
+    elif a%5 == 0:
         return ("blipp")
-    elif n%3 == 0:
+    elif a%3 == 0:
         return ("flipp")
     else:
-        return str(n)
+        return str(a)
 
-n = 200
-
-for x in range(1, n+1):
+for x in range(1, a+1):
     print (flippblipp (x))
-    

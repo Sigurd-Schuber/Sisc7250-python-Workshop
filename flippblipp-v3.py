@@ -1,22 +1,23 @@
-def flippblipp(n):
-    if n%15 == 0:
+def flippblipp(a):
+    if a%15 == 0:
         return ("flipp blipp")
-    elif n%5 == 0:
+    elif a%5 == 0:
         return ("blipp")
-    elif n%3 == 0:
+    elif a%3 == 0:
         return ("flipp")
     else:
-        return str(n)
-
-#n = 200
-
-#for x in range(1, n+1):
-#    print (flippblipp (x))
+        return str(a)
 
 n = 1
-print (str(n))
+print("      ", n)
+state = True
 
-while n < 10:
-    print (n)
+while state == True:
     n = n+1
-    
+    korrekt = flippblipp(n)
+    inm = input("Nästa: ")
+    if inm != korrekt:
+        state = False
+        print("Fel - ", korrekt)
+        print()
+        print("Game Over")
